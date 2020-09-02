@@ -1,16 +1,63 @@
 // All
+.footer{
+    width: 100%;
+    background: #ffb0b8;
+    .wrap-footer{
+        display: flex;
+        justify-content: space-between;
+        .logo-facebook{
+            background-image: url('../image/footer/icon_facebook.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+}
 
 // Desktop, Labtop
 @media (min-width: 1025px) {
-
+    .footer{padding: 4.6% 0;}
+    .contact{
+        display: flex;
+        div{
+            font-size: 16px;
+            margin-right: 40px;
+        }
+    }
+    .logo-facebook{
+        width: 24px;
+        height: 24px;
+    }
 }
 
 // Tablet
 @media (min-width: 481px) and (max-width: 1024px) {
-    
+    .footer{padding: 4.6% 0;}
+    .contact{
+        display: flex;
+        div{
+            font-size: 12px;
+            margin-right: 20px;
+        }
+    }
+    .logo-facebook{
+        width: 20px;
+        height: 20px;
+    }
 }
 
 // Mobile
 @media (max-width: 480px) {
-    
+    .footer{padding: 10% 0;}
+    .contact{
+        div{
+            font-size: 12px;
+            margin-top: 40px;
+            &:first-child{margin-top: 0;}
+            div{margin: 0;}
+        }
+    }
+    .logo-facebook{
+        width: 20px;
+        height: 20px;
+    }
 }

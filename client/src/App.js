@@ -26,9 +26,8 @@ function App() {
               <Route component={NotFound}/>
             </Switch>
           </main>
-          <Footer/>
+        <Footer/>
       </Router>
-
     </div>
   );
 }
