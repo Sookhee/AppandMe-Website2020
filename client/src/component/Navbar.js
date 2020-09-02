@@ -16,7 +16,7 @@ const Navbar = () => {
                 <div className="wrap-navbar">
                     <div className="nav-brand">
                         <div className="nav-logo"></div>
-                        <NavLink to="/" className="fw-medium">APP&#38;ME</NavLink>
+                        <NavLink to="/" className="fw-bold">APP&#38;ME</NavLink>
                     </div>
                     <div className="nav-menu-pc">
                         <NavLink to="/about" className="nav-item fw-medium" activeStyle={{color: '#ffb0b8'}}>ABOUT</NavLink>

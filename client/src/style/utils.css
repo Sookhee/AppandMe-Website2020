@@ -33,3 +33,47 @@ input:focus, button:focus{
     width: 80%;
     margin: 0 auto;
 }
+
+/* Button */
+/* Desktop, Labtop */
+@media (min-width: 1025px) {
+    .btn{
+        display: inline-block;
+        font-size: 16px;
+        padding: 8px 40px;
+        border: 2px solid;
+        border-radius: 50px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 1024px) {
+    .btn{
+        display: inline-block;
+        font-size: 14px;
+        padding: 6px 32px;
+        border: 2px solid;
+        border-radius: 50px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .btn{
+        display: inline-block;
+        font-size: 12px;
+        padding: 4px 20px;
+        border: 1.5px solid;
+        border-radius: 50px;
+    }
+}
+
+.btn-pink{
+    color: #ffb0b8;
+    border-color: #ffb0b8;
+}
+
+.btn-white{
+    color: #ffffff;
+    border-color: #ffffff;
+}

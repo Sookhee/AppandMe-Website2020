@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 import '../style/Home.scss';
 
 const Home = () => {
@@ -15,8 +16,17 @@ const Home = () => {
                         <li>* 위 내용은 지원자들에게 개별 문자로 공지될 계획입니다.</li>
                     </ul>
                 </div>
-                <button>지원하기</button>
+                <NavLink to="/apply">
+                    <div className="btn btn-white">지원하기</div>
+                </NavLink>
+                <NavLink to="/apply">
+                    <div className="btn btn-white">신청확인</div>
+                </NavLink>
             </div>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
         </div>
     );
 }
