@@ -9,6 +9,9 @@ const Navbar = () => {
     const toggleIsDropHandler = () => {
         setIsDrop(!isDrop);
     }
+    const setIsDropFalse = () => {
+        setIsDrop(false);
+    }
 
     return (
         <div className="navbar">
@@ -16,7 +19,7 @@ const Navbar = () => {
                 <div className="wrap-navbar">
                     <div className="nav-brand">
                         <div className="nav-logo"></div>
-                        <NavLink to="/" className="fw-bold">APP&#38;ME</NavLink>
+                        <NavLink to="/" className="fw-bold" onClick={setIsDropFalse}>APP&#38;ME</NavLink>
                     </div>
                     <div className="nav-menu-pc">
                         <NavLink to="/about" className="nav-item fw-medium" activeStyle={{color: '#ffb0b8'}}>ABOUT</NavLink>
@@ -31,10 +34,10 @@ const Navbar = () => {
             </div>
             <div className="container">
                 <div className="nav-drop" style={isDrop ? {display: 'flex'} : {display: 'none'}}>
-                    <NavLink to="/about" className="nav-item fw-medium" activeStyle={{color: '#ffb0b8'}} onClick={toggleIsDropHandler}>ABOUT</NavLink>
-                    <NavLink to="/members" className="nav-item fw-medium" activeStyle={{color: '#ffb0b8'}} onClick={toggleIsDropHandler}>MEMBERS</NavLink>
-                    <NavLink to="/apply" className="nav-item fw-medium" activeStyle={{color: '#ffb0b8'}} onClick={toggleIsDropHandler}>APPLY</NavLink>
-                    <NavLink to="/fna" className="nav-item fw-medium" activeStyle={{color: '#ffb0b8'}} onClick={toggleIsDropHandler}>FNA</NavLink>
+                    <NavLink to="/about" className="nav-item fw-medium" activeStyle={{color: '#ffb0b8'}} onClick={setIsDropFalse}>ABOUT</NavLink>
+                    <NavLink to="/members" className="nav-item fw-medium" activeStyle={{color: '#ffb0b8'}} onClick={setIsDropFalse}>MEMBERS</NavLink>
+                    <NavLink to="/apply" className="nav-item fw-medium" activeStyle={{color: '#ffb0b8'}} onClick={setIsDropFalse}>APPLY</NavLink>
+                    <NavLink to="/fna" className="nav-item fw-medium" activeStyle={{color: '#ffb0b8'}} onClick={setIsDropFalse}>FNA</NavLink>
                 </div>
             </div>
         </div>

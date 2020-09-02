@@ -71,8 +71,10 @@
         background-size: contain;
     }
     .nav-drop{
-        width: 80%;
+        width: 100%;
         position: absolute;
+        z-index: 10;
+        right: 0;
         padding-bottom: 16px;
         background: #fff;
         flex-direction: column;

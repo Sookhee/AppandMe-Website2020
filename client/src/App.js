@@ -9,6 +9,7 @@ import Home from './component/Home';
 import About from './component/About';
 import Members from './component/Members';
 import Apply from './component/Apply';
+import Confirm from './component/Confirm';
 import FNA from './component/FNA';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
               <Route path="/about" component={About}/>
               <Route path="/members" component={Members}/>
               <Route path="/apply" component={Apply}/>
+              <Route path="/confirm" component={Confirm}/>
               <Route path="/fna" component={FNA}/>
               <Route component={NotFound}/>
             </Switch>
