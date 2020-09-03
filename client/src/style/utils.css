@@ -20,6 +20,7 @@ input:focus, button:focus{
 .fc-white{color: #fff;}
 .fc-black{color: #000;}
 .fc-pink{color: #ffb0b8;}
+.fc-gray{color: #707070;}
 
 /* Font Weight */
 .fw-light{font-weight: 300;}

@@ -1,0 +1,58 @@
+// All
+.titlebar-br{
+    width: 100%;
+    height: 1px;
+    background: #707070;
+}
+
+
+// Desktop, Labtop
+@media (min-width: 1025px) {
+    .titlebar{
+        margin-top: 4%;
+        .title{
+            margin-bottom: 1%;
+            font-size: 2.4em;
+        }
+        .note{
+            font-size: 1.4em;
+        }
+        .titlebar-br{
+            margin-top: 2%;
+        }
+    }
+}
+
+// Tablet
+@media (min-width: 481px) and (max-width: 1024px) {
+    .titlebar{
+        margin-top: 4%;
+        .title{
+            margin-bottom: 1%;
+            font-size: 1.9em;
+        }
+        .note{
+            font-size: 1em;
+        }
+        .titlebar-br{
+            margin-top: 2%;
+        }
+    }
+}
+
+// Mobile
+@media (max-width: 480px) {
+    .titlebar{
+        margin-top: 8%;
+        .title{
+            margin-bottom: 2%;
+            font-size: 1.3em;
+        }
+        .note{
+            font-size: 0.8em;
+        }
+        .titlebar-br{
+            margin-top: 5%;
+        }
+    }
+}
