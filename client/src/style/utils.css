@@ -1,5 +1,5 @@
 /* Reset */
-html, body, span, p, div, h1, h2, h3, h4, h5, h6{
+html, body, span, p, div, h1, h2, h3, h4, h5, h6, table, input, textarea{
     margin: 0;
     padding: 0;
     border: 0;
@@ -11,8 +11,8 @@ a, a:visited, a:hover, a:active{
     color: #000;
     text-decoration: none;
 }
-
-input:focus, button:focus{
+textarea{ resize: none;}
+input:focus, button:focus, textarea:focus{
     outline: none;
 }
 
@@ -72,6 +72,7 @@ input:focus, button:focus{
 .btn-pink{
     color: #ffb0b8;
     border-color: #ffb0b8;
+    background-color: #ffffff;
 }
 
 .btn-white{
