@@ -1,16 +1,87 @@
 // All
+.members-profile{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .members-wrap{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.member{
+    .member-img{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
 
 // Desktop, Labtop
 @media (min-width: 1025px) {
-
+    .members{
+        .members-profile{
+            margin: 60px 0 120px;
+            .members-menu{
+                font-size: 1.4em;
+                div{margin-bottom: 14px;}
+            }
+            .members-wrap{
+                width: 80%;
+            }
+        }   
+    }
+    
+    .member{
+        .member-img{width: 19vw; height: 19vw; margin-bottom: 10px;}
+        .member-name{font-size: 1.4em; }
+        .member-major{font-size: 1em; margin-bottom: 50px;}
+    }
 }
 
 // Tablet
 @media (min-width: 481px) and (max-width: 1024px) {
+    .members{
+        .members-profile{
+            margin: 60px 0 120px;
+            .members-menu{
+                font-size: 1.2em;
+                div{margin-bottom: 8px;}
+            }
+            .members-wrap{
+                width: 76%;
+            }
+        }   
+    }
     
+    .member{
+        .member-img{width: 18vw; height: 18vw; margin-bottom: 10px;}
+        .member-name{font-size: 1.2em; }
+        .member-major{width: 18vw; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size: 0.9em; margin-bottom: 50px;}
+    }
 }
 
 // Mobile
 @media (max-width: 480px) {
+    .members{
+        .members-profile{
+            margin: 40px 0 80px;
+            .members-menu{
+                font-size: 1em;
+                margin-bottom: 20px;
+                div{margin-bottom: 4px;}
+            }
+            .members-wrap{
+                width: 100%;
+            }
+        }   
+    }
     
+    .member{
+        .member-img{width: 36vw; height: 36vw; margin-bottom: 10px;}
+        .member-name{font-size: 1em; }
+        .member-major{width: 36vw; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size: 0.8em; margin-bottom: 30px;}
+    }
 }
