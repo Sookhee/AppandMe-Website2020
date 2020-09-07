@@ -36,27 +36,27 @@ const Members = () => {
                 name: '소민지',
                 major: '뉴미디어 소프트웨어과',
                 profileImg: Profile7th2,
-                facebookUrl: ''
+                facebookUrl: 'https://www.facebook.com/profile.php?id=100009610962191'
             },{
                 name: '이현수',
                 major: '뉴미디어 솔루션과',
                 profileImg: Profile7th3,
-                facebookUrl: ''
+                facebookUrl: 'https://www.facebook.com/profile.php?id=100009075758105'
             },{
                 name: '서채원',
                 major: '뉴미디어 디자인과',
                 profileImg: Profile7th4,
-                facebookUrl: ''
+                facebookUrl: 'https://www.facebook.com/profile.php?id=100009601390266'
             },{
                 name: '윤주하',
                 major: '뉴미디어 디자인과',
                 profileImg: Profile7th5,
-                facebookUrl: ''
+                facebookUrl: 'https://www.facebook.com/profile.php?id=100000911379372'
             },{
                 name: '주선우',
                 major: '뉴미디어 디자인과',
                 profileImg: Profile7th6,
-                facebookUrl: ''
+                facebookUrl: 'https://www.facebook.com/profile.php?id=100004550599183'
             },
         ],
         th8: [
@@ -64,32 +64,32 @@ const Members = () => {
                 name: '이수빈',
                 major: '뉴미디어 소프트웨어과',
                 profileImg: Profile8th1,
-                facebookUrl: ''
+                facebookUrl: 'https://www.facebook.com/profile.php?id=100005096685966'
             },{
                 name: '함형연',
                 major: '뉴미디어 소프트웨어과',
                 profileImg: Profile8th2,
-                facebookUrl: ''
+                facebookUrl: 'https://www.facebook.com/profile.php?id=100008652840731'
             },{
                 name: '김아라',
                 major: '뉴미디어 솔루션과',
                 profileImg: Profile8th3,
-                facebookUrl: ''
+                facebookUrl: 'https://www.facebook.com/profile.php?id=100034567932008'
             },{
                 name: '맹수연',
                 major: '뉴미디어 솔루션과',
                 profileImg: Profile8th4,
-                facebookUrl: ''
+                facebookUrl: 'https://www.facebook.com/profile.php?id=100011719852951'
             },{
                 name: '권유빈',
                 major: '뉴미디어 디자인과',
                 profileImg: Profile8th5,
-                facebookUrl: ''
+                facebookUrl: 'https://www.facebook.com/profile.php?id=100024626683649'
             },{
                 name: '오연서',
                 major: '뉴미디어 디자인과',
                 profileImg: Profile8th6,
-                facebookUrl: ''
+                facebookUrl: 'https://www.facebook.com/profile.php?id=100009078326333'
             },
         ]
     }
