@@ -10,7 +10,7 @@
         margin: 0;
     }
 
-    table{
+    .apply-table{
         width: 100%;
         td{input, textarea{width: 100%;}}
     }
@@ -20,7 +20,7 @@
 @media (min-width: 1025px) {
     .temp{width: 50px;}
     button{margin-bottom: 12%;}
-    table{
+    .apply-table{
         margin: 5% 0;
         tr:nth-child(odd){
             font-size: 1.4em;
@@ -46,7 +46,7 @@
 @media (min-width: 481px) and (max-width: 1024px) {
     .temp{width: 30px;}
     button{margin-bottom: 12%;}
-    table{
+    .apply-table{
         margin: 5% 0;
         tr:nth-child(odd){
             font-size: 1.3em;
@@ -72,7 +72,7 @@
 @media (max-width: 480px) {
     .temp{width: 10px;}
     button{margin-bottom: 12%;}
-    table{
+    .apply-table{
         margin: 5% 0;
         tr:nth-child(odd){
             font-size: 1em;

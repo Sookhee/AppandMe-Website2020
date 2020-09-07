@@ -13,7 +13,7 @@ const Apply = () => {
                 }/>
                 
                 <form className="apply-form">
-                    <table>
+                    <table className="apply-table">
                         <tr>
                             <td>학번</td>
                             <td className="temp"></td>
