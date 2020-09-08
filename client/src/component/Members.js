@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import {NavLink} from 'react-router-dom';
 import Titlebar from './Titlebar';
 import '../style/Members.scss';
 
@@ -139,7 +138,7 @@ const Members = () => {
 const Member = (props) => {
     return (
         <div className="member">
-            <a href={props.facebookUrl} target="_blank">
+            <a href={props.facebookUrl} target="blank">
                 <div className="member-img" style={{backgroundImage: `url(${props.profileImg})`}}></div>
                 <div className="member-name fw-bold">{props.name}</div>
                 <div className="member-major fc-gray">{props.major}</div>

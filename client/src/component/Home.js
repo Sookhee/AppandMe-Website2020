@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {NavLink} from 'react-router-dom';
+import axios from 'axios';
 import '../style/Home.scss';
 
 const Home = () => {
+
+    useEffect(() => {
+        axios.get('/api')
+            .then(response => { console.log(response.data) })
+    }, [])
+
     return (
         <div className="home">
             <div className="container">
