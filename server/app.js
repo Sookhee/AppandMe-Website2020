@@ -36,16 +36,27 @@ app.post('/api/apply', (req, res) => {
     const _q1 = req.body.q1;
     const _q2 = req.body.q2;    
     const _q3 = req.body.q3;
-
-    connection.query(sql.insert, [_uid, _name, _passwd, _q1, _q2, _q3], (err, result) => {
+    
+    connection.query(sql.select_uid, [_uid], (err, result) => {
         if(err){
             console.log(err);
-            res.json({success: false, message: '신청서 제출에 실패하였습니다.'});
+            res.json({success: false, message: '에러'});
         } else{
-            console.log('INSERTED!');
-            res.json({success: true});
+            if(result.length > 0){
+                res.json({success: false, message: '이미 제출한 지원서가 있습니다'});
+            } else{
+                connection.query(sql.insert, [_uid, _name, _passwd, _q1, _q2, _q3], (err, result) => {
+                    if(err){
+                        console.log(err);
+                        res.json({success: false, message: '신청서 제출에 실패하였습니다.'});
+                    } else{
+                        console.log('INSERTED!');
+                        res.json({success: true});
+                    }
+                })
+            }
         }
-    })
+    })    
 })
 
 // 전체 목록 가져오기
