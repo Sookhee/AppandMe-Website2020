@@ -29,7 +29,7 @@ const Home = () => {
                     <div className="btn btn-white fw-bold">지원하기</div>
                 </NavLink>
                 <NavLink to="/confirm">
-                    <div className="btn btn-white fw-bold">신청확인</div>
+                    <div className="btn btn-white fw-bold">지원서 확인/수정</div>
                 </NavLink>
             </div>
             <div className="home-layer"></div>

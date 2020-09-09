@@ -19,7 +19,8 @@ let sql = {
     list: 'select * from apply',
     select_uid: 'select * from apply where uid=?',
     select_name: 'select * from apply where name=?',
-    insert: 'insert into apply (uid, name, passwd, q1, q2, q3) values(?, ?, ?, ?, ?, ?)'
+    insert: 'insert into apply (uid, name, passwd, q1, q2, q3) values(?, ?, ?, ?, ?, ?)',
+    update: 'update apply set q1=?, q2=?, q3=? where id=?'
 }
 
 // application/x-www-form-urlencoded
@@ -35,8 +36,6 @@ app.post('/api/apply', (req, res) => {
     const _q1 = req.body.q1;
     const _q2 = req.body.q2;    
     const _q3 = req.body.q3;
-
-    console.log(req.body);
 
     connection.query(sql.insert, [_uid, _name, _passwd, _q1, _q2, _q3], (err, result) => {
         if(err){
@@ -100,6 +99,23 @@ app.get('/api/search/:name', (req, res) => {
                 success: true,
                 data: result
             })
+        }
+    })
+})
+
+app.post('/api/edit/:id', (req, res) => {
+    const _id = req.params.id;
+    const _q1 = req.body.q1;
+    const _q2 = req.body.q2;
+    const _q3 = req.body.q3;
+
+    connection.query(sql.update, [_q1, _q2, _q3, _id], (err, result) => {
+        if(err){
+            console.log(err);
+            res.join({success: false, message: '지원서 수정에 실패했습니다'});
+        } else{
+            console.log('UPDATED!');
+            res.json({success: true});
         }
     })
 })

@@ -9,8 +9,8 @@ const Apply = () => {
                 <Titlebar
                     title={"APPLY"}
                     note1={"앱앤미 지원을 결심하셨군요! 좋은 결과 있길 바랍니다 :)"}
-                    note2={"* 제출 후 수정이 불가하니 신중히 작성해주세요."
-                }/>
+                    note2={"* 지원서는 메인화면에서 확인 및 수정 페이지로 이동 가능합니다!"}
+                />
                 
                 <form className="apply-form">
                     <table className="apply-table">
