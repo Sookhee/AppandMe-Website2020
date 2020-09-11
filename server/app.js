@@ -20,7 +20,7 @@ let sql = {
     select_uid: 'select * from apply where uid=?',
     select_name: 'select * from apply where name=?',
     insert: 'insert into apply (uid, name, passwd, q1, q2, q3) values(?, ?, ?, ?, ?, ?)',
-    update: 'update apply set q1=?, q2=?, q3=? where id=?'
+    update: 'update apply set name=?, q1=?, q2=?, q3=? where uid=?'
 }
 
 // application/x-www-form-urlencoded
@@ -29,6 +29,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 // application/json
 app.use(bodyParser.json());
 
+// 지원서 제출
 app.post('/api/apply', (req, res) => {
     const _uid = req.body.uid;
     const _name = req.body.name;
@@ -57,6 +58,24 @@ app.post('/api/apply', (req, res) => {
             }
         }
     })    
+})
+
+app.post('/api/edit', (req, res) => {
+    const _uid = req.body.uid;
+    const _name = req.body.name;
+    const _q1 = req.body.q1;
+    const _q2 = req.body.q2;    
+    const _q3 = req.body.q3;
+
+    connection.query(sql.update, [_name, _q1, _q2, _q3, _uid], (err, result) => {
+        if(err){
+            console.log(err);
+            return;
+        } else{
+            console.log('UPDATED!');
+            res.json({success: true})
+        }
+    })
 })
 
 // 전체 목록 가져오기
@@ -91,6 +110,8 @@ app.post('/api/confirm', (req, res) => {
             } else{
                 if(result[0].passwd === _passwd){
                     res.json({success: true, data: result[0]});
+                } else{
+                    res.json({success: false, message: '비밀번호가 일치하지 않습니다'});
                 }
             }
         }

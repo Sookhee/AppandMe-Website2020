@@ -1,0 +1,43 @@
+.confirm{
+    .confirm-false{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-end;
+        table{
+            margin: 0 auto;
+            input{
+                width: 100%;
+                border: none;
+                border-bottom: 1px solid #707070;
+                padding-bottom: 10px;
+            }
+        }
+    }
+    
+}
+
+// Desktop, Labtop
+@media (min-width: 1025px) {
+    .confirm{
+        .confirm-false{
+            width: 400px; margin: 0 auto;
+            table{width: 400px; margin-top: 60px;}
+            tr{
+                .temp{height: 30px;}
+                &:nth-child(odd){height: 20px;}
+            }
+            button{margin-top: 40px;}
+        }
+    }
+}
+
+// Tablet
+@media (min-width: 481px) and (max-width: 1024px) {
+
+}
+
+// Mobile
+@media (max-width: 480px) {
+    
+}
