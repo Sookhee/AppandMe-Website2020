@@ -34,42 +34,34 @@ const Confirm = (props) => {
                 />
 
                 {
-                    isIdentified ? (
-                        <form>
-                            <table className="apply-table">
+                    // isIdentified ? (
+                    true ? (
+                        <form className="confirm-true">
+                            <table>
                                 <tr>
-                                    <td>학번</td>
-                                    <td className="temp"></td>
-                                    <td>이름</td>
+                                    <td className="first-td">학번</td>
+                                    <td>{applyForm.uid}asdf</td>
+                                    <td className="first-td">이름</td>
+                                    <td>{applyForm.name}asdf</td>
+                                </tr>
+                                <tr></tr>
+                                <tr>
+                                    <td colSpan="4">자기소개</td>
                                 </tr>
                                 <tr>
-                                    <td><input type="tel" minLength="4" maxLength="4" name="uid" placeholder="학번을 입력해주세요"/></td>
-                                    <td className="temp"></td>
-                                    <td><input type="text" name="name" placeholder="이름을 입력해주세요"/></td>
+                                    <td colSpan="4"><textarea name="q1" maxLength="220" placeholder="간단히 자신을 소개해주세요(최대 200자)"></textarea></td>
                                 </tr>
                                 <tr>
-                                    <td colSpan="3">비밀번호</td>
+                                    <td colSpan="4">지원동기</td>
                                 </tr>
                                 <tr>
-                                    <td colSpan="3"><input type="tel" minLength="4" maxLength="4" name="passwd" placeholder="지원서를 수정할 때 사용할 비밀번호를 알려주세요 (4자리 숫자)"/></td>
+                                    <td colSpan="4"><textarea name="q2" maxLength="220" placeholder="앱앤미에 지원하게 된 동기를 알려주세요(최대 200자)"></textarea></td>
                                 </tr>
                                 <tr>
-                                    <td colSpan="3">자기소개</td>
+                                    <td colSpan="4">다섯글자</td>
                                 </tr>
                                 <tr>
-                                    <td colSpan="3"><textarea name="q1" maxLength="220" placeholder="간단히 자신을 소개해주세요(최대 200자)"></textarea></td>
-                                </tr>
-                                <tr>
-                                    <td colSpan="3">지원동기</td>
-                                </tr>
-                                <tr>
-                                    <td colSpan="3"><textarea name="q2" maxLength="220" placeholder="앱앤미에 지원하게 된 동기를 알려주세요(최대 200자)"></textarea></td>
-                                </tr>
-                                <tr>
-                                    <td colSpan="3">다섯글자</td>
-                                </tr>
-                                <tr>
-                                    <td colSpan="3"><input type="text" minLength="5" maxLength="5" name="q3" placeholder="다섯글자로 나를 표현한다면?"/></td>
+                                    <td colSpan="4"><input type="text" minLength="5" maxLength="5" name="q3" placeholder="다섯글자로 나를 표현한다면?"/></td>
                                 </tr>
                             </table>
                             <button type="submit" className="btn btn-pink fw-bold">SUBMIT</button>
