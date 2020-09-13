@@ -34,34 +34,33 @@ const Confirm = (props) => {
                 />
 
                 {
-                    // isIdentified ? (
-                    true ? (
+                    isIdentified ? (
                         <form className="confirm-true">
                             <table>
                                 <tr>
                                     <td className="first-td">학번</td>
-                                    <td>{applyForm.uid}asdf</td>
+                                    <td>{applyForm.uid}</td>
                                     <td className="first-td">이름</td>
-                                    <td>{applyForm.name}asdf</td>
+                                    <td>{applyForm.name}</td>
                                 </tr>
                                 <tr></tr>
                                 <tr>
                                     <td colSpan="4">자기소개</td>
                                 </tr>
                                 <tr>
-                                    <td colSpan="4"><textarea name="q1" maxLength="220" placeholder="간단히 자신을 소개해주세요(최대 200자)"></textarea></td>
+                                    <td colSpan="4"><textarea name="q1" maxLength="220" placeholder="간단히 자신을 소개해주세요(최대 200자)">{applyForm.q1}</textarea></td>
                                 </tr>
                                 <tr>
                                     <td colSpan="4">지원동기</td>
                                 </tr>
                                 <tr>
-                                    <td colSpan="4"><textarea name="q2" maxLength="220" placeholder="앱앤미에 지원하게 된 동기를 알려주세요(최대 200자)"></textarea></td>
+                                    <td colSpan="4"><textarea name="q2" maxLength="220" placeholder="앱앤미에 지원하게 된 동기를 알려주세요(최대 200자)">{applyForm.q2}</textarea></td>
                                 </tr>
                                 <tr>
                                     <td colSpan="4">다섯글자</td>
                                 </tr>
                                 <tr>
-                                    <td colSpan="4"><input type="text" minLength="5" maxLength="5" name="q3" placeholder="다섯글자로 나를 표현한다면?"/></td>
+                                    <td colSpan="4"><input type="text" minLength="5" maxLength="5" name="q3" placeholder="다섯글자로 나를 표현한다면?" value={applyForm.q3}/></td>
                                 </tr>
                             </table>
                             <button type="submit" className="btn btn-pink fw-bold">SUBMIT</button>
