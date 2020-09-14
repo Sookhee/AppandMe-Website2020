@@ -1,9 +1,10 @@
 import React from 'react';
+import {withRouter} from 'react-router-dom';
 import axios from 'axios';
 import '../style/Apply.scss';
 import Titlebar from './Titlebar';
 
-const Apply = () => {
+const Apply = (props) => {
 
     const applyHandler = (event) => {
         event.preventDefault();
@@ -18,6 +19,7 @@ const Apply = () => {
         .then(function(response) {
             if(response.data.success){
                 alert('지원서가 접수되었습니다.\n면접 일시 및 장소 안내는 개별 문자로 안내할 예정입니다.')
+                props.history.push('/confirm');
             } else{
                 alert(response.data.message);
             }
@@ -77,4 +79,4 @@ const Apply = () => {
     );
 }
 
-export default Apply;
+export default withRouter(Apply);

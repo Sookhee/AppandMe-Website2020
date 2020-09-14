@@ -19,7 +19,7 @@ const Confirm = (props) => {
                 setApplyForm(response.data.data);
                 setIsIdentified(true);
             } else{
-                alert(response.data.message)
+                alert(response.data.message);
             }
         })
     }
@@ -34,7 +34,8 @@ const Confirm = (props) => {
         })
         .then(function(response) {
             if(response.data.success){
-                alert("true");
+                alert("지원서 수정이 성공적으로 완료되었습니다.");
+                setIsIdentified(false);
             } else{
                 alert("false")
             }
