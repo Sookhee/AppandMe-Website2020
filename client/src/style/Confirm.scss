@@ -76,7 +76,13 @@
 @media (min-width: 481px) and (max-width: 1024px) {
     .confirm{
         .confirm-false{
-
+            width: 400px; margin: 0 auto;
+            table{width: 400px; margin-top: 80px;}
+            tr{
+                .temp{height: 30px;}
+                &:nth-child(odd){height: 20px;}
+            }
+            button{margin: 60px 0 200px;}
         }
 
         .confirm-true{
@@ -108,5 +114,40 @@
 
 // Mobile
 @media (max-width: 480px) {
-    
+    .confirm{
+        .confirm-false{
+            width: 100%; margin: 0 auto;
+            table{width: 100%; margin-top: 80px;}
+            tr{
+                .temp{height: 30px;}
+                &:nth-child(odd){height: 20px;}
+            }
+            button{margin: 60px 0 200px;}
+        }
+
+        .confirm-true{
+            table{
+                margin: 5% 0;
+                .first-td{width: 60px;}
+                tr:nth-child(odd){
+                    font-size: 1.3em;
+                    td{padding: 30px 0 0;}
+                }
+                .input{
+                    height: 30px; 
+                    line-height: 30px;
+                    margin-top: 12px;
+                    padding-bottom: 8px;
+                    font-size: 1em;
+                }
+                textarea{
+                    height: 30px;
+                    margin-top: 16px;
+                    font-size: 1em;
+                    &::placeholder{font-size: 1em;}
+                }
+            }
+            button{margin-bottom: 20%;}
+        }
+    }
 }
