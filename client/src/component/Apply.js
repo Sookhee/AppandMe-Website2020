@@ -1,8 +1,29 @@
 import React from 'react';
+import axios from 'axios';
 import '../style/Apply.scss';
 import Titlebar from './Titlebar';
 
 const Apply = () => {
+
+    const applyHandler = (event) => {
+        event.preventDefault();
+        axios.post('/api/apply', {
+            uid: event.target.uid.value,
+            passwd: event.target.passwd.value,
+            name: event.target.name.value,
+            q1: event.target.q1.value,
+            q2: event.target.q2.value,
+            q3: event.target.q3.value
+        })
+        .then(function(response) {
+            if(response.data.success){
+                alert('지원서가 접수되었습니다.\n면접 일시 및 장소 안내는 개별 문자로 안내할 예정입니다.')
+            } else{
+                alert(response.data.message);
+            }
+        })
+    }
+
     return (
         <div className="apply">
             <div className="container">
@@ -12,7 +33,7 @@ const Apply = () => {
                     note2={"* 지원서는 메인화면에서 확인 및 수정 페이지로 이동 가능합니다!"}
                 />
                 
-                <form className="apply-form">
+                <form className="apply-form" onSubmit={applyHandler}>
                     <table className="apply-table">
                         <tr>
                             <td>학번</td>

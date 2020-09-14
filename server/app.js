@@ -20,7 +20,7 @@ let sql = {
     select_uid: 'select * from apply where uid=?',
     select_name: 'select * from apply where name=?',
     insert: 'insert into apply (uid, name, passwd, q1, q2, q3) values(?, ?, ?, ?, ?, ?)',
-    update: 'update apply set name=?, q1=?, q2=?, q3=? where uid=?'
+    update: 'update apply set q1=?, q2=?, q3=? where uid=?'
 }
 
 // application/x-www-form-urlencoded
@@ -62,12 +62,11 @@ app.post('/api/apply', (req, res) => {
 
 app.post('/api/edit', (req, res) => {
     const _uid = req.body.uid;
-    const _name = req.body.name;
     const _q1 = req.body.q1;
     const _q2 = req.body.q2;    
     const _q3 = req.body.q3;
 
-    connection.query(sql.update, [_name, _q1, _q2, _q3, _uid], (err, result) => {
+    connection.query(sql.update, [_q1, _q2, _q3, _uid], (err, result) => {
         if(err){
             console.log(err);
             return;
@@ -102,10 +101,10 @@ app.post('/api/confirm', (req, res) => {
     connection.query(sql.select_uid, [_uid], (err, result) => {
         if(err){
             console.log(err);
-            res.json({success: false, message: '일치하는 지원서를 찾을 수 없습니다.'});
+            res.json({success: false, message: '문제가 발생하였습니다. 앱앤미 페이스북 페이지를 통해 문의해주세요'});
         } else{
             console.log('SELECTED!');
-            if(result.length > 1){
+            if(result.length < 1){
                 res.json({success: false, message: '지원서를 찾을 수 없습니다\n앱앤미 페이스북을 이용해서 문의해주세요'});
             } else{
                 if(result[0].passwd === _passwd){

@@ -8,7 +8,7 @@ const Confirm = (props) => {
     const [applyForm, setApplyForm] = useState('');
     const [isIdentified, setIsIdentified] = useState(false);
 
-    const applyHandler = (event) => {
+    const confirmHandler = (event) => {
         event.preventDefault();
         axios.post('/api/confirm', {
             uid: event.target.uid.value,
@@ -24,6 +24,23 @@ const Confirm = (props) => {
         })
     }
 
+    const editHandler = (event) => {
+        event.preventDefault();
+        axios.post('/api/edit', {
+            uid: applyForm.uid,
+            q1: event.target.q1.value,
+            q2: event.target.q2.value,
+            q3: event.target.q3.value
+        })
+        .then(function(response) {
+            if(response.data.success){
+                alert("true");
+            } else{
+                alert("false")
+            }
+        })
+    }
+
     return (
         <div className="confirm">
             <div className="container">
@@ -35,7 +52,7 @@ const Confirm = (props) => {
 
                 {
                     isIdentified ? (
-                        <form className="confirm-true">
+                        <form className="confirm-true" onSubmit={editHandler}>
                             <table>
                                 <tr>
                                     <td className="first-td">학번</td>
@@ -60,13 +77,13 @@ const Confirm = (props) => {
                                     <td colSpan="4">다섯글자</td>
                                 </tr>
                                 <tr>
-                                    <td colSpan="4"><input type="text" minLength="5" maxLength="5" name="q3" placeholder="다섯글자로 나를 표현한다면?" value={applyForm.q3}/></td>
+                                    <td colSpan="4"><textarea name="q3" className="input" maxLength="5" placeholder="다섯글자로 나를 표현한다면?">{applyForm.q3}</textarea></td>
                                 </tr>
                             </table>
                             <button type="submit" className="btn btn-pink fw-bold">SUBMIT</button>
                         </form>
                     ) : (
-                        <form onSubmit={applyHandler} className="confirm-false">
+                        <form onSubmit={confirmHandler} className="confirm-false">
                             <table>
                                 <tr>
                                     <td>학번</td>
