@@ -1,4 +1,15 @@
 // All
+.notfound{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h2{margin-bottom: 1%;}
+p{margin-bottom: 6%;}
 
 // Desktop, Labtop
 @media (min-width: 1025px) {
