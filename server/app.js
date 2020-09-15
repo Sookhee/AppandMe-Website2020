@@ -118,8 +118,8 @@ app.post('/api/confirm', (req, res) => {
 })
 
 // 지원서 검색 (이름_name) : 앱앤미
-app.get('/api/search/:name', (req, res) => {
-    const _name = req.params.name;
+app.post('/api/search', (req, res) => {
+    const _name = req.body.name;
 
     connection.query(sql.select_name, [_name], (err, result) => {
         if(err){

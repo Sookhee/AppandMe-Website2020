@@ -11,6 +11,7 @@ import Members from './component/Members';
 import Apply from './component/Apply';
 import Confirm from './component/Confirm';
 import FNA from './component/FNA';
+import AdminOnly from './component/AdminOnly';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
               <Route path="/apply" component={Apply}/>
               <Route path="/confirm" component={Confirm}/>
               <Route path="/fna" component={FNA}/>
+              <Route path="/adminonly" component={AdminOnly}/>
               <Route component={NotFound}/>
             </Switch>
           </main>
