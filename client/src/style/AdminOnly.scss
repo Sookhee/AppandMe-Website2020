@@ -1,0 +1,65 @@
+// All
+.admin-status{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    input{
+        border: 1px solid #787878;
+        padding: 2px 6px;
+        margin-right: 6px;
+    }
+    .btn-search{
+        background: #fff;
+        padding: 4px 6px;
+        border: 1px solid pink;
+    }
+}
+
+.wrap-apply-list{
+    margin: 40px 0 120px;
+    .apply-form{
+        background: #ffffff;
+        box-shadow: 0 0 4px 0 #ffb0b8;
+        border-radius: 6px;
+        margin-bottom: 26px;
+        span{margin-left: 12px;}
+        .apply-content{
+            margin-bottom: 10px;
+        }
+    }
+}
+
+// Desktop, Labtop
+@media (min-width: 1025px) {
+    .admin-status{
+        margin: 40px 0 20px;
+    }
+
+    .apply-form{
+        padding: 2%;
+    }
+}
+
+// Tablet
+@media (min-width: 481px) and (max-width: 1024px) {
+    .admin-status{
+        margin: 40px 0 20px;
+    }
+    .apply-form{
+        padding: 3%;
+    }
+}
+
+// Mobile
+@media (max-width: 480px) {
+    .admin-status{
+        justify-content: center;
+        margin: 20px 0 0 0;
+        h2{font-size: 1.2em; margin-bottom: 16px;}
+        form{float: right;}
+    }
+
+    .apply-form{
+        padding: 6%;
+    }
+}

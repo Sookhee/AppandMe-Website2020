@@ -14,7 +14,17 @@ const AdminOnly = () => {
             setApplyList(response.data.data);
             setApplyCount(response.data.data.length);
         })
-    })
+    }, [])
+
+    const searchHandler = (event) => {
+        event.preventDefault();
+        axios.post('/api/search', {
+            name: event.target.name.value
+        })
+        .then(function(response){
+            setApplyList(response.data.data);
+        })
+    }
 
     return(
         <div>
@@ -22,9 +32,16 @@ const AdminOnly = () => {
                 <Titlebar
                     title="ADMIN ONLY"
                     note1 = "앱앤미에 지원한 신입생들의 지원서를 확인할 수 있습니다."
-                    note2 = "이름으로 지원자를 검색할 수도 있어요 ^ㅇ^"
+                    note2 = "이름 검색을 지원합니다"
                 />
-                <h3>현재까지 지원자는 {applyCount}명입니다.</h3>
+                <div className="admin-status">
+                    <h2>현재까지 지원자는 {applyCount}명입니다.</h2>
+                    <form onSubmit={searchHandler}>
+                        <input type="text" name="name" placeholder="찾고 싶은 지원자의 이름"/>
+                        <button type="submit" className="btn-search fc-pink">검색</button>
+                    </form>
+                </div>
+                <hr/>
                 <div className="wrap-apply-list">
                     {
                         applyList.map((apply, i) => {
@@ -49,11 +66,13 @@ const AdminOnly = () => {
 const ApplyForm = (props) => {
     return (
         <div className="apply-form">
-            {props.uid}
-            {props.name}
-            {props.q1}
-            {props.q2}
-            {props.q3}
+            <div className="apply-content fw-bold" style={{fontSize: '1.2em'}}>{props.uid}<span>{props.name}</span></div>
+            <div className="apply-q fw-bold">자기소개</div>
+            <div className="apply-content">{props.q1}</div>
+            <div className="apply-q fw-bold">지원동기</div>
+            <div className="apply-content">{props.q2}</div>
+            <div className="apply-q fw-bold">다섯글자로 자신을 표현한다면?</div>
+            <div className="apply-content">{props.q3}</div>
         </div>
     )
 }

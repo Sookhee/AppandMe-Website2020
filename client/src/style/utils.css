@@ -35,6 +35,9 @@ input:focus, button:focus, textarea:focus{
     margin: 0 auto;
 }
 
+/* hr */
+hr{height: 0.1px; border: none; background: #707070;}
+
 /* Button */
 /* Desktop, Labtop */
 @media (min-width: 1025px) {

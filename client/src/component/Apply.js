@@ -32,7 +32,7 @@ const Apply = (props) => {
                 <Titlebar
                     title={"APPLY"}
                     note1={"앱앤미 지원을 결심하셨군요! 좋은 결과 있길 바랍니다 :)"}
-                    note2={"* 지원서는 메인화면에서 확인 및 수정 페이지로 이동 가능합니다!"}
+                    note2={"지원서는 \"지원확인\" 페이지에서 수정이 가능합니다!"}
                 />
                 
                 <form className="apply-form" onSubmit={applyHandler}>

@@ -7,7 +7,7 @@ const Titlebar = (props) => {
             <div className="title fw-bold">{props.title}</div>
             <div className="note fw-regular fc-gray">{props.note1}</div>
             <div className="note fws-regular fc-gray">{props.note2}</div>
-            <div className="titlebar-br"/>
+            <hr className="titlebar-br"/>
         </div>
     )
 }

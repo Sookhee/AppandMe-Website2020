@@ -1,14 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {NavLink} from 'react-router-dom';
-import axios from 'axios';
 import '../style/Home.scss';
 
 const Home = () => {
-
-    useEffect(() => {
-        axios.get('/api')
-            .then(response => { console.log(response.data) })
-    }, [])
 
     return (
         <div className="home">
@@ -29,7 +23,7 @@ const Home = () => {
                     <div className="btn btn-white fw-bold">지원하기</div>
                 </NavLink>
                 <NavLink to="/confirm">
-                    <div className="btn btn-white fw-bold">지원서 확인/수정</div>
+                    <div className="btn btn-white fw-bold">지원확인</div>
                 </NavLink>
             </div>
             <div className="home-layer"></div>

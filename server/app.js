@@ -18,7 +18,7 @@ else{console.log('DB FALSE :(')}
 let sql = {
     list: 'select * from apply',
     select_uid: 'select * from apply where uid=?',
-    select_name: 'select * from apply where name=?',
+    select_name: "select * from apply where name like CONCAT('%', ?,  '%')",
     insert: 'insert into apply (uid, name, passwd, q1, q2, q3) values(?, ?, ?, ?, ?, ?)',
     update: 'update apply set q1=?, q2=?, q3=? where uid=?'
 }
