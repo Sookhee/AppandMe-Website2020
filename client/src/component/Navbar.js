@@ -42,6 +42,7 @@ const Navbar = () => {
                     <NavLink to="/fna" className="nav-item fw-medium" activeStyle={{color: '#ffb0b8'}} onClick={setIsDropFalse}>FNA</NavLink>
                 </div>
             </div>
+            <hr/>
         </div>
         
     )
