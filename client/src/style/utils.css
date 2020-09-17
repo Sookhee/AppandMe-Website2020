@@ -12,7 +12,7 @@ a, a:visited, a:hover, a:active{
     text-decoration: none;
 }
 textarea{ resize: none;}
-input:focus, button:focus, textarea:focus{
+input:focus, button:focus, textarea:focus, summary:focus{
     outline: none;
 }
 
