@@ -1,10 +1,10 @@
 import React from 'react';
 import Titlebar from './Titlebar';
-import '../style/FNA.scss';
+import '../style/FAQ.scss';
 
-const FNA = () => {
+const FAQ = () => {
 
-    const fna = [
+    const faq = [
         {
             question: '앱앤미에 대한 질문1 입니다',
             answer: '네, 질문에 대한 대답1 입니다'
@@ -18,18 +18,18 @@ const FNA = () => {
     ];
 
     return (
-        <div className="fna">
+        <div className="faq">
             <div className="container">
                 <Titlebar
-                    title={"FNA"}
+                    title={"FAQ"}
                     note1={"앱앤미에 대하여 자주 물어보는 질문들을 정리했어요."}
                     note2={"더 궁금한 사항은 앱앤미 페이스북 메신저를 이용해주세요!"}
                 />
-                <div className="wrap-fna">
+                <div className="wrap-faq">
                     {
-                        fna.map((fna, i) => {
-                            return (<Question question={fna.question}
-                                            answer={fna.answer}
+                        faq.map((faq, i) => {
+                            return (<Question question={faq.question}
+                                            answer={faq.answer}
                                             key={i}
                             />);
                         })
@@ -45,8 +45,8 @@ const Question = (props) => {
         <>
             <div className="wrap-frequently ">
                 <details>
-                    <summary className="fna-question fw-bold">Q. {props.question}</summary>
-                    <div className="fna-answer fc-gray">A. {props.answer}</div>
+                    <summary className="faq-question fw-bold">Q. {props.question}</summary>
+                    <div className="faq-answer fc-gray">A. {props.answer}</div>
                 </details>
             </div>
             <hr/>
@@ -54,4 +54,4 @@ const Question = (props) => {
     )
 }
 
-export default FNA;
+export default FAQ;

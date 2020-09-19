@@ -10,7 +10,7 @@ import About from './component/About';
 import Members from './component/Members';
 import Apply from './component/Apply';
 import Confirm from './component/Confirm';
-import FNA from './component/FNA';
+import FAQ from './component/FAQ';
 import AdminOnly from './component/AdminOnly';
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
               <Route path="/members" component={Members}/>
               <Route path="/apply" component={Apply}/>
               <Route path="/confirm" component={Confirm}/>
-              <Route path="/fna" component={FNA}/>
+              <Route path="/faq" component={FAQ}/>
               <Route path="/adminonly" component={AdminOnly}/>
               <Route component={NotFound}/>
             </Switch>
