@@ -9,7 +9,7 @@ import Home from './component/Home';
 import About from './component/About';
 import Members from './component/Members';
 import Apply from './component/Apply';
-import Confirm from './component/Confirm';
+import Mypage from './component/Mypage';
 import FAQ from './component/FAQ';
 import AdminOnly from './component/AdminOnly';
 
@@ -24,7 +24,7 @@ function App() {
               <Route path="/about" component={About}/>
               <Route path="/members" component={Members}/>
               <Route path="/apply" component={Apply}/>
-              <Route path="/confirm" component={Confirm}/>
+              <Route path="/mypage" component={Mypage}/>
               <Route path="/faq" component={FAQ}/>
               <Route path="/adminonly" component={AdminOnly}/>
               <Route component={NotFound}/>

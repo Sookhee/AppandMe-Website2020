@@ -7,8 +7,9 @@ router.post('/check', (req, res) => {
     const _uid = req.body.uid;
     const _passwd = req.body.passwd;
 
+    console.log(_uid + ", " + _passwd);
     connection.query(sql.mypage.select_by_uid, [_uid], (err, result) => {
-        if(err){ res.json({success: false, err: err, message: '지원서를 찾을 수 없습니다.\n이미 지원서를 제출하셨다면 앱앤미 페이스북 메신저를 통해 문의해주세요.'}); }
+        if(err || result.length < 1){ res.json({success: false, err: err, message: '학번과 일치하는 지원서를 찾을 수 없습니다.\n이미 지원서를 제출하셨다면 앱앤미 페이스북 메신저를 통해 문의해주세요.'}); }
         else{
             if(result[0].passwd === _passwd){ res.json({success: true, data: result[0]}); }
             else{ res.json({success: false, message: '비밀번호가 일치하지 않습니다.'}); }

@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Titlebar from './Titlebar';
-import '../style/Confirm.scss';
+import '../style/Mypage.scss';
 
-const Confirm = (props) => {
+const Mypage = (props) => {
 
     const [applyForm, setApplyForm] = useState('');
     const [isIdentified, setIsIdentified] = useState(false);
 
-    const confirmHandler = (event) => {
+    const checkHandler = (event) => {
         event.preventDefault();
-        axios.post('/api/confirm', {
+        axios.post('/api/mypage/check', {
             uid: event.target.uid.value,
             passwd: event.target.passwd.value
         })
@@ -26,7 +26,7 @@ const Confirm = (props) => {
 
     const editHandler = (event) => {
         event.preventDefault();
-        axios.post('/api/edit', {
+        axios.post('/api/mypage/edit', {
             uid: applyForm.uid,
             q1: event.target.q1.value,
             q2: event.target.q2.value,
@@ -43,17 +43,17 @@ const Confirm = (props) => {
     }
 
     return (
-        <div className="confirm">
+        <div className="mypage">
             <div className="container">
                 <Titlebar
-                    title={"CONFIRM"}
+                    title={"MYPAGE"}
                     note1={"제출한 지원서를 확인하거나 수정할 수 있습니다"}
                     note2={"비밀번호를 잊어버렸다면 앱앤미 페이스북 페이지를 통해 문의해주세요"}
                 />
 
                 {
                     isIdentified ? (
-                        <form className="confirm-true" onSubmit={editHandler}>
+                        <form className="mypage-true" onSubmit={editHandler}>
                             <table>
                                 <tr>
                                     <td className="first-td">학번</td>
@@ -84,7 +84,7 @@ const Confirm = (props) => {
                             <button type="submit" className="btn btn-pink fw-bold">SUBMIT</button>
                         </form>
                     ) : (
-                        <form onSubmit={confirmHandler} className="confirm-false">
+                        <form onSubmit={checkHandler} className="mypage-false">
                             <table>
                                 <tr>
                                     <td>학번</td>
@@ -110,4 +110,4 @@ const Confirm = (props) => {
     )
 }
 
-export default Confirm;
+export default Mypage;

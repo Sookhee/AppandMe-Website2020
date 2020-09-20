@@ -9,7 +9,7 @@ const AdminOnly = () => {
     const [applyList, setApplyList] = useState([]);
 
     useEffect(() => {
-        axios.get('/api/list')
+        axios.get('/api/adminonly')
         .then(function(response){
             setApplyList(response.data.data);
             setApplyCount(response.data.data.length);
@@ -18,7 +18,7 @@ const AdminOnly = () => {
 
     const searchHandler = (event) => {
         event.preventDefault();
-        axios.post('/api/search', {
+        axios.post('/api/adminonly', {
             name: event.target.name.value
         })
         .then(function(response){

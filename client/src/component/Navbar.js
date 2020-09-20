@@ -25,8 +25,8 @@ const Navbar = () => {
                         <NavLink to="/about" className="nav-item fw-medium" activeStyle={{color: '#ffb0b8'}}>ABOUT</NavLink>
                         <NavLink to="/members" className="nav-item fw-medium" activeStyle={{color: '#ffb0b8'}}>MEMBERS</NavLink>
                         <NavLink to="/apply" className="nav-item fw-medium" activeStyle={{color: '#ffb0b8'}}>APPLY</NavLink>
-                        <NavLink to="/confirm" className="nav-item fw-medium" activeStyle={{color: '#ffb0b8'}}>CONFIRM</NavLink>
-                        <NavLink to="/fna" className="nav-item fw-medium" activeStyle={{color: '#ffb0b8'}}>FNA</NavLink>
+                        <NavLink to="/mypage" className="nav-item fw-medium" activeStyle={{color: '#ffb0b8'}}>MYPAGE</NavLink>
+                        <NavLink to="/faq" className="nav-item fw-medium" activeStyle={{color: '#ffb0b8'}}>FAQ</NavLink>
                     </div>
                     <div className="nav-menu-mobile">
                         <div className="toggle-button" onClick={toggleIsDropHandler} style={isDrop ? {backgroundImage: `url(${IconDropTrue})`} : {backgroundImage: `url(${IconDropFalse})`}}></div>
@@ -38,8 +38,8 @@ const Navbar = () => {
                     <NavLink to="/about" className="nav-item fw-medium" activeStyle={{color: '#ffb0b8'}} onClick={setIsDropFalse}>ABOUT</NavLink>
                     <NavLink to="/members" className="nav-item fw-medium" activeStyle={{color: '#ffb0b8'}} onClick={setIsDropFalse}>MEMBERS</NavLink>
                     <NavLink to="/apply" className="nav-item fw-medium" activeStyle={{color: '#ffb0b8'}} onClick={setIsDropFalse}>APPLY</NavLink>
-                    <NavLink to="/confirm" className="nav-item fw-medium" activeStyle={{color: '#ffb0b8'}} onClick={setIsDropFalse}>CONFIRM</NavLink>
-                    <NavLink to="/fna" className="nav-item fw-medium" activeStyle={{color: '#ffb0b8'}} onClick={setIsDropFalse}>FNA</NavLink>
+                    <NavLink to="/mypage" className="nav-item fw-medium" activeStyle={{color: '#ffb0b8'}} onClick={setIsDropFalse}>MYPAGE</NavLink>
+                    <NavLink to="/faq" className="nav-item fw-medium" activeStyle={{color: '#ffb0b8'}} onClick={setIsDropFalse}>FAQ</NavLink>
                 </div>
             </div>
             <hr/>

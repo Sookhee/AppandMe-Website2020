@@ -1,6 +1,6 @@
-.confirm{
+.mypage{
     display: flex; justify-content: flex-end; flex-wrap: wrap;
-    .confirm-false{
+    .mypage-false{
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -16,7 +16,7 @@
         }
     }
 
-    .confirm-true{
+    .mypage-true{
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
@@ -34,8 +34,8 @@
 
 // Desktop, Labtop
 @media (min-width: 1025px) {
-    .confirm{
-        .confirm-false{
+    .mypage{
+        .mypage-false{
             width: 400px; margin: 0 auto;
             table{width: 400px; margin-top: 60px;}
             tr{
@@ -45,7 +45,7 @@
             button{margin-top: 40px;}
         }
 
-        .confirm-true{
+        .mypage-true{
             table{
                 margin: 5% 0;
                 .first-td{width: 100px;}
