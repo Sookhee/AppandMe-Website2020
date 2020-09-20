@@ -5,8 +5,9 @@ import '../style/AdminOnly.scss';
 
 const AdminOnly = () => {
 
+    const [isAdmin, setIsAdmin] = useState(false);
     const [applyCount, setApplyCount] = useState(0);
-    const [applyList, setApplyList] = useState([]);
+    const [applyList, setApplyList] = useState();
 
     useEffect(() => {
         axios.get('/api/adminonly')
@@ -15,6 +16,16 @@ const AdminOnly = () => {
             setApplyCount(response.data.data.length);
         })
     }, [])
+
+    const adminIdentifierHandler = (event) => {
+        event.preventDefault();
+        if(event.target.appandme_admin_code.value === '인증코드뭐하지..?'){
+            setIsAdmin(true);
+        } else{
+            setIsAdmin(false);
+            alert('당신, 앱앤미 부원 아니지!! ლ(ಠ益ಠლ)')
+        }
+    }
 
     const searchHandler = (event) => {
         event.preventDefault();
@@ -34,30 +45,46 @@ const AdminOnly = () => {
                     note1 = "앱앤미에 지원한 신입생들의 지원서를 확인할 수 있습니다."
                     note2 = "이름 검색을 지원합니다"
                 />
-                <div className="admin-status">
-                    <h2>현재까지 지원자는 {applyCount}명입니다.</h2>
-                    <form onSubmit={searchHandler}>
-                        <input type="text" name="name" placeholder="찾고 싶은 지원자의 이름"/>
-                        <button type="submit" className="btn-search fc-pink">검색</button>
-                    </form>
-                </div>
-                <hr/>
-                <div className="wrap-apply-list">
-                    {
-                        applyList.map((apply, i) => {
-                            return (
-                                <ApplyForm
-                                    uid = {apply.uid}
-                                    name = {apply.name}
-                                    q1 = {apply.q1}
-                                    q2 = {apply.q2}
-                                    q3 = {apply.q3}
-                                    tel = {apply.tel}
-                                />
-                            );
-                        })
-                    }
-                </div>
+                {
+                    isAdmin ? (
+                        <div className="admin-true">
+                            <div className="admin-status">
+                                <h2>현재까지 지원자는 {applyCount}명입니다.</h2>
+                                <form onSubmit={searchHandler}>
+                                    <input type="text" name="name" value="" placeholder="찾고 싶은 지원자의 이름"/>
+                                    <button type="submit" className="btn-search fc-pink">검색</button>
+                                </form>
+                            </div>
+                            <hr/>
+                            <div className="wrap-apply-list">
+                                {
+                                    applyList.map((apply, i) => {
+                                        return (
+                                            <ApplyForm
+                                                uid = {apply.uid}
+                                                name = {apply.name}
+                                                q1 = {apply.q1}
+                                                q2 = {apply.q2}
+                                                q3 = {apply.q3}
+                                                tel = {apply.tel}
+                                            />
+                                        );
+                                    })
+                                }
+                            </div>
+                        </div>
+                    ) : (
+                        <div className="admin-false">
+                            <div className="wrap-admin-identify">
+                                <h3>인증 코드를 입력해주세요</h3>
+                                <form onSubmit={adminIdentifierHandler}>
+                                    <input type="text" name="appandme_admin_code" placeholder="앱앤미 부원이시라면 아시죠?"></input>
+                                    <button type="submit" class="btn-pink">submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    )
+                }
             </div>
         </div>
     )

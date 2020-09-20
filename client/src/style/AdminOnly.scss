@@ -4,7 +4,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     input{
-        border: 1px solid #787878;
+        border: 1px solid #707070;
         padding: 2px 6px;
         margin-right: 6px;
     }
@@ -12,6 +12,17 @@
         background: #fff;
         padding: 4px 6px;
         border: 1px solid pink;
+    }
+}
+
+.wrap-admin-identify{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 60px 0 160px;
+    form{
+        margin-top: 20px;
+        input{border-bottom: 1px solid #707070; margin-right: 12px;}
     }
 }
 

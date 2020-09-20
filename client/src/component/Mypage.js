@@ -38,7 +38,7 @@ const Mypage = (props) => {
                 alert("지원서 수정이 성공적으로 완료되었습니다.");
                 setIsIdentified(false);
             } else{
-                alert("false")
+                alert("지원서 수정에 실패했습니다.\n다시 시도해주세요")
             }
         })
     }
