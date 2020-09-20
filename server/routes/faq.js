@@ -10,4 +10,14 @@ router.get('/', (req, res) => {
     })
 })
 
+router.post('/', (req, res) => {
+    const _question = req.body.question;
+    const _answer = req.body.answer;
+
+    connection.query(sql.faq.insert_faq, [_question, _answer], (err, result) => {
+        if(err){ res.json({success: false, err: err}); }
+        else{ res.json({success: true}) }
+    })
+})
+
 module.exports = router;
