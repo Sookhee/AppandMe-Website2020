@@ -16,11 +16,8 @@ import Profile8th4 from '../image/members/8th/맹수연.jpg';
 import Profile8th5 from '../image/members/8th/권유빈.jpg';
 import Profile8th6 from '../image/members/8th/오연서.jpg';
 
-
-
-
 const Members = () => {
-    const [is7th, setIs7th] = useState(true);
+    const [is7th, setIs7th] = useState(false);
     const setIs7thTrueHandler = () => {setIs7th(true);}
     const setIs7thFalseHandler = () => {setIs7th(false);}
 

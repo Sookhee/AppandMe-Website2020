@@ -30,7 +30,8 @@ const Mypage = (props) => {
             uid: applyForm.uid,
             q1: event.target.q1.value,
             q2: event.target.q2.value,
-            q3: event.target.q3.value
+            q3: event.target.q3.value,
+            tel: event.target.tel.value
         })
         .then(function(response) {
             if(response.data.success){
@@ -79,6 +80,12 @@ const Mypage = (props) => {
                                 </tr>
                                 <tr>
                                     <td colSpan="4"><textarea name="q3" className="input" maxLength="5" placeholder="다섯글자로 나를 표현한다면?">{applyForm.q3}</textarea></td>
+                                </tr>
+                                <tr>
+                                    <td colSpan="4">전화번호</td>
+                                </tr>
+                                <tr>
+                                    <td colSpan="4"><input type="number" name="tel" placeholder="면접 일시 및 장소 안내에 사용됩니다. (숫자만 입력해주세요)"/></td>
                                 </tr>
                             </table>
                             <button type="submit" className="btn btn-pink fw-bold">SUBMIT</button>

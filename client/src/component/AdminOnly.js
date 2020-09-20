@@ -52,6 +52,7 @@ const AdminOnly = () => {
                                     q1 = {apply.q1}
                                     q2 = {apply.q2}
                                     q3 = {apply.q3}
+                                    tel = {apply.tel}
                                 />
                             );
                         })
@@ -67,6 +68,8 @@ const ApplyForm = (props) => {
     return (
         <div className="apply-form">
             <div className="apply-content fw-bold" style={{fontSize: '1.2em'}}>{props.uid}<span>{props.name}</span></div>
+            <div className="apply-q fw-bold">전화번호</div>
+            <div className="apply-content">0{props.tel}</div>
             <div className="apply-q fw-bold">자기소개</div>
             <div className="apply-content">{props.q1}</div>
             <div className="apply-q fw-bold">지원동기</div>

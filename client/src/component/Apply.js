@@ -14,12 +14,13 @@ const Apply = (props) => {
             name: event.target.name.value,
             q1: event.target.q1.value,
             q2: event.target.q2.value,
-            q3: event.target.q3.value
+            q3: event.target.q3.value,
+            tel: event.target.tel.value
         })
         .then(function(response) {
             if(response.data.success){
                 alert('지원서가 접수되었습니다.\n면접 일시 및 장소 안내는 개별 문자로 안내할 예정입니다.')
-                props.history.push('/confirm');
+                props.history.push('/mypage');
             } else{
                 alert(response.data.message);
             }
@@ -70,6 +71,12 @@ const Apply = (props) => {
                         </tr>
                         <tr>
                             <td colSpan="3"><input type="text" minLength="5" maxLength="5" name="q3" placeholder="다섯글자로 나를 표현한다면?"/></td>
+                        </tr>
+                        <tr>
+                            <td colSpan="3">전화번호</td>
+                        </tr>
+                        <tr>
+                            <td colSpan="3"><input type="number" name="tel" placeholder="면접 일시 및 장소 안내에 사용됩니다. (숫자만 사용)"/></td>
                         </tr>
                     </table>
                     <button type="submit" className="btn btn-pink fw-bold">SUBMIT</button>
