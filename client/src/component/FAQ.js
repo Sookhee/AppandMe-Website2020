@@ -1,21 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Titlebar from './Titlebar';
+import axios from 'axios';
 import '../style/FAQ.scss';
 
 const FAQ = () => {
+    const [faqList, setFaqList] = useState([]);
 
-    const faq = [
-        {
-            question: '앱앤미에 대한 질문1 입니다',
-            answer: '네, 질문에 대한 대답1 입니다'
-        }, {
-            question: '앱앤미에 대한 질문2 입니다',
-            answer: '네, 질문에 대한 대답2 입니다'
-        }, {
-            question: '앱앤미에 대한 질문3 입니다',
-            answer: '네, 질문에 대한 대답3 입니다'
-        },
-    ];
+    useEffect(() => {
+        axios.get('/api/faq')
+        .then(function(response){
+            setFaqList(response.data.data);
+            console.log(response.data.data);
+        })
+    }, []);
 
     return (
         <div className="faq">
@@ -27,7 +24,7 @@ const FAQ = () => {
                 />
                 <div className="wrap-faq">
                     {
-                        faq.map((faq, i) => {
+                        faqList.map((faq, i) => {
                             return (<Question question={faq.question}
                                             answer={faq.answer}
                                             key={i}
