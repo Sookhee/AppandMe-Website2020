@@ -15,8 +15,8 @@ router.post('/', (req, res) => {
     const _answer = req.body.answer;
 
     connection.query(sql.faq.insert_faq, [_question, _answer], (err, result) => {
-        if(err){ res.json({success: false, err: err}); }
-        else{ res.json({success: true}) }
+        if(err){ res.json({success: false, err: err, message: 'FAQ 등록 실패...'}); }
+        else{ res.json({success: true, message: 'FAQ 등록 성공!'}) }
     })
 })
 

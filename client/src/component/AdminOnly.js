@@ -7,7 +7,8 @@ const AdminOnly = () => {
 
     const [isAdmin, setIsAdmin] = useState(false);
     const [applyCount, setApplyCount] = useState(0);
-    const [applyList, setApplyList] = useState();
+    const [applyList, setApplyList] = useState([]);
+    const [isToggleFAQ, setIsToggleFAQ] = useState(false);
 
     useEffect(() => {
         axios.get('/api/adminonly')
@@ -22,7 +23,6 @@ const AdminOnly = () => {
         if(event.target.appandme_admin_code.value === '인증코드뭐하지..?'){
             setIsAdmin(true);
         } else{
-            setIsAdmin(false);
             alert('당신, 앱앤미 부원 아니지!! ლ(ಠ益ಠლ)')
         }
     }
@@ -34,6 +34,22 @@ const AdminOnly = () => {
         })
         .then(function(response){
             setApplyList(response.data.data);
+        })
+    }
+
+    const isAddFAQHandler = () => {
+        setIsToggleFAQ(!isToggleFAQ);
+    }
+
+    const addFAQHandler = (event) => {
+        event.preventDefault();
+        axios.post('/api/faq', {
+            question: event.target.question.value,
+            answer: event.target.answer.value
+        })
+        .then(function(response){
+            if(response.data.success){isToggleFAQ(false)}
+            alert(response.data.message);
         })
     }
 
@@ -49,13 +65,25 @@ const AdminOnly = () => {
                     isAdmin ? (
                         <div className="admin-true">
                             <div className="admin-status">
-                                <h2>현재까지 지원자는 {applyCount}명입니다.</h2>
-                                <form onSubmit={searchHandler}>
-                                    <input type="text" name="name" value="" placeholder="찾고 싶은 지원자의 이름"/>
+                                <h2 style={{margin: '0px'}}>현재까지 지원자는 {applyCount}명입니다.</h2>
+                                <form onSubmit={searchHandler} style={{height: '30px'}}>
+                                    <input type="text" name="name" placeholder="찾고 싶은 지원자의 이름"/>
                                     <button type="submit" className="btn-search fc-pink">검색</button>
                                 </form>
+                                <div onClick={isAddFAQHandler}>{isToggleFAQ ? "FAQ 폼 닫기 ▲" : "FAQ 추가하기 ▼"}</div>
                             </div>
-                            <hr/>
+                            {
+                                isToggleFAQ ? (
+                                    <div className="admin-addFAQ">
+                                        <form onSubmit={addFAQHandler}>
+                                            <input type="text" name="question" placeholder="자주 묻는 질문"/> <br/>
+                                            <input type="text" name="answer" placeholder="답변"/> <br/>
+                                            <button type="submit" className="btn btn-pink">SUBMIT</button>
+                                        </form>
+                                        <div style={{clear: 'both'}}></div>
+                                    </div>
+                                ) : <span></span>
+                            }
                             <div className="wrap-apply-list">
                                 {
                                     applyList.map((apply, i) => {
