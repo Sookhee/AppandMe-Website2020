@@ -20,7 +20,7 @@ const AdminOnly = () => {
 
     const adminIdentifierHandler = (event) => {
         event.preventDefault();
-        if(event.target.appandme_admin_code.value === '인증코드뭐하지..?'){
+        if(event.target.appandme_admin_code.value === ''){
             setIsAdmin(true);
         } else{
             alert('당신, 앱앤미 부원 아니지!! ლ(ಠ益ಠლ)')

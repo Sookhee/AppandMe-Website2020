@@ -4,15 +4,27 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all --parallel start:**",
-    "start:client": "react-scripts start",
-    "start:server": "node ./server/app.js",
-    "build": "react-scripts build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/app.js",
+    "backend": "nodemon server/app.js",
+    "frontend": "npm run start --prefix client",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sookhee/appandMe-Website2020.git"
+  },
+  "engine": {
+    "node": "12.16.3",
+    "npm": "6.14.8"
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sookhee/appandMe-Website2020/issues"
+  },
+  "homepage": "https://github.com/Sookhee/appandMe-Website2020#readme",
   "dependencies": {
-    "npm-run-all": "^4.1.5"
+    "concurrently": "^5.3.0"
   }
 }
