@@ -6,6 +6,7 @@ import '../style/Mypage.scss';
 const Mypage = (props) => {
 
     const [applyForm, setApplyForm] = useState('');
+    const [tel, setTel] = useState('');
     const [isIdentified, setIsIdentified] = useState(false);
 
     const checkHandler = (event) => {
@@ -18,6 +19,7 @@ const Mypage = (props) => {
             if(response.data.success){
                 setApplyForm(response.data.data);
                 setIsIdentified(true);
+                setTel('0' + response.data.data.tel);
             } else{
                 alert(response.data.message);
             }
@@ -85,7 +87,7 @@ const Mypage = (props) => {
                                     <td colSpan="4">전화번호</td>
                                 </tr>
                                 <tr>
-                                    <td colSpan="4"><input type="number" name="tel" placeholder="면접 일시 및 장소 안내에 사용됩니다. (숫자만 입력해주세요)"/></td>
+                                    <td colSpan="4"><input type="number" name="tel" onChange={e => setTel(e.target.value)} placeholder="면접 일시 및 장소 안내에 사용됩니다. (숫자만 입력해주세요)" value={tel}/></td>
                                 </tr>
                             </table>
                             <button type="submit" className="btn btn-pink fw-bold">SUBMIT</button>

@@ -7,6 +7,7 @@ const adminonlyRoute = require('./routes/adminonly');
 const applyRoute = require('./routes/apply');
 const mypageRoute = require('./routes/mypage');
 const faqRoute = require('./routes/faq');
+const connection = require('./db/db_conn');
 
 // application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({extended: true}));

@@ -22,7 +22,7 @@ const Home = () => {
                 <NavLink to="/apply">
                     <div className="btn btn-white fw-bold">지원하기</div>
                 </NavLink>
-                <NavLink to="/confirm">
+                <NavLink to="/mypage">
                     <div className="btn btn-white fw-bold">지원확인</div>
                 </NavLink>
             </div>
