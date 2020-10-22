@@ -19,6 +19,6 @@ app.use('/api/apply', applyRoute);
 app.use('/api/mypage', mypageRoute);
 app.use('/api/faq', faqRoute);
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log(`${port} port is Running`)
 })
