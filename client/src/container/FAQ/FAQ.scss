@@ -1,0 +1,36 @@
+// All
+.wrap-faq{
+    details > summary::-webkit-details-marker {display: none;}
+    details summary:after {
+        float: right;
+        content: url('../../image/faq/icon_down.png');
+    }
+    details[open] summary:after{
+        content: url('../../image/faq/icon_up.png');
+    }
+}
+
+// Desktop, Labtop
+@media (min-width: 1025px) {
+    .wrap-faq{
+        font-size: 25px;
+        .wrap-frequently{padding: 60px 0;}
+        .faq-question{font-weight: 700;}
+        .faq-answer{color: #707070; margin-top: 40px;}
+    }
+}
+
+// Tablet
+@media (min-width: 481px) and (max-width: 1024px) {
+
+}
+
+// Mobile
+@media (max-width: 480px) {
+    .wrap-faq{
+        font-size: 18px;
+        .wrap-frequently{padding: 30px 0;}
+        .faq-question{font-weight: 700;}
+        .faq-answer{color: #707070; margin-top: 20px;}
+    }
+}

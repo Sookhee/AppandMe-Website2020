@@ -9,6 +9,7 @@ import About from './container/About/About';
 import Member from './container/Members/Members';
 import Apply from './container/Apply/Apply';
 import Mypage from './container/Mypage/Mypage';
+import FAQ from './container/FAQ/FAQ';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
               <Route path="/members" component={Member}/>
               <Route path="/apply" component={Apply}/>
               <Route path="/mypage" component={Mypage}/>
+              <Route path="/faq" component={FAQ}/>
               <Route component={NotFound}/>
             </Switch>
           </main>
