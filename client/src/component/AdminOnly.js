@@ -11,7 +11,7 @@ const AdminOnly = () => {
     const [isToggleFAQ, setIsToggleFAQ] = useState(false);
 
     useEffect(() => {
-        axios.get('/api/adminonly')
+        axios.get('http://localhost:5000/api/adminonly')
         .then(function(response){
             setApplyList(response.data.data);
             setApplyCount(response.data.data.length);

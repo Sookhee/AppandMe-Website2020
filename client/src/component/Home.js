@@ -12,9 +12,9 @@ const Home = () => {
                     <div className="home-subtitle fc-white fw-regular">2020년, 전공동아리 앱앤미와 함께 할 신입생을 모집합니다.</div>
                     <div className="home-info fc-white fw-regular">
                         <ul>
-                            <li>신청기간 : 2020.00.00 - 2020.00.00</li>
-                            <li>면접일시 : 2020.00.00</li>
-                            <li>면접장소 : 앱창작터 1실 (예정)</li>
+                            <li>신청기간 : 2020.10.24(목) - 2020.10.26(월) 오전 5시까지</li>
+                            <li>면접일시 : 2020.10.26(월) 오전 8시</li>
+                            <li>면접장소 : 5층 무한상상카페</li>
                             <li>* 위 내용은 지원자들에게 개별 문자로 재공지될 계획입니다.</li>
                         </ul>
                     </div>
