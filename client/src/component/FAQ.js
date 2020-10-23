@@ -10,7 +10,6 @@ const FAQ = () => {
         axios.get('/api/faq')
         .then(function(response){
             setFaqList(response.data.data);
-            console.log(response.data.data);
         })
     }, []);
 

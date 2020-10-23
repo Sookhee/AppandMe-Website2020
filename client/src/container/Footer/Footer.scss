@@ -1,0 +1,49 @@
+// All
+footer{
+    color: #fff;
+    background: #ffb0b8;
+    .wrap-contact{
+        display: flex;
+        .title{font-weight: 700;}        
+    }
+    .facebook{
+        background-image: url('../../image/footer/icon_facebook.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+// Desktop, Labtop
+@media (min-width: 1025px) {
+    footer{
+        .container{width: 1347px; margin: 0 auto; display: flex; justify-content: space-between;}
+        .wrap-contact{
+            font-size: 14px;
+            padding: 57px 0;
+            .contact{
+                .title{margin: 0 0 15px;}
+                div{margin-top: 5px;}
+                &:nth-child(2){margin-left: 140px;}
+            }
+        }
+        .facebook{width: 27px; height: 27px; margin-top: 54px;}
+    }
+}
+
+// Mobile
+@media (max-width: 480px) {
+    footer{
+        padding: 20px 0 40px;
+        .container{width: 324px; margin: 0 auto; display: flex; justify-content: space-between;}
+        .wrap-contact{
+            flex-direction: column;
+            .contact{
+                margin-top: 20px;
+                font-size: 14px; 
+                .title{margin-bottom: 4px;}
+            }
+        }
+        .facebook{margin-top: 20px; width: 20px; height: 20px;}
+    }
+}
