@@ -11,8 +11,8 @@ const About = () => {
                         <div className="image"></div>
                         <div className="wrap-content">
                             <div className="title">USER에서 MAKER로<br/>거듭나고자 하는 당신을 위한<br/>최고의 선택, APP&ME.</div>
-                            <div className="li"><span>신청기간</span>2020.00.00 - 2020.00.00</div>
-                            <div className="li"><span>면접일시</span>2020.00.00 오전7시</div>
+                            <div className="li"><span>신청기간</span>2020.10.24 - 2020.10.26 오전5시</div>
+                            <div className="li"><span>면접일시</span>2020.10.26 오전8시</div>
                             <div className="li"><span>면접장소</span>무한상상카페</div>
                             <NavLink to="/apply"><div className="apply"></div></NavLink>
                         </div>
