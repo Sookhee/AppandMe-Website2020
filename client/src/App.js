@@ -6,6 +6,7 @@ import Navbar from './container/Navbar/Navbar';
 import Footer from './container/Footer/Footer';
 import NotFound from './component/NotFound';
 import About from './container/About/About';
+import Member from './container/Members/Members';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <main>
             <Switch>
               <Route exact={true} path="/" component={About}/>
+              <Route path="/members" component={Member}/>
               <Route component={NotFound}/>
             </Switch>
           </main>
