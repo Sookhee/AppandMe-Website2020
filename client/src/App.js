@@ -4,12 +4,13 @@ import './style/utils.css';
 import './App.css';
 import Navbar from './container/Navbar/Navbar';
 import Footer from './container/Footer/Footer';
-import NotFound from './component/NotFound';
+import NotFound from './container/NotFound/NotFound';
 import About from './container/About/About';
 import Member from './container/Members/Members';
 import Apply from './container/Apply/Apply';
 import Mypage from './container/Mypage/Mypage';
 import FAQ from './container/FAQ/FAQ';
+import Adminonly from './container/Adminonly/Adminonly';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
               <Route path="/apply" component={Apply}/>
               <Route path="/mypage" component={Mypage}/>
               <Route path="/faq" component={FAQ}/>
+              <Route path="/adminonly" component={Adminonly}/>
               <Route component={NotFound}/>
             </Switch>
           </main>

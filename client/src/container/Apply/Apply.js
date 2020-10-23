@@ -1,4 +1,5 @@
 import React from 'react';
+import Titlebar from '../../component/Titlebar/Titlebar';
 import './Apply.scss';
 import axios from 'axios';
 
@@ -38,6 +39,11 @@ const Apply = (props) => {
     return(
         <div className="apply">
             <div className="container">
+                <Titlebar
+                        title={"APPLY"}
+                        note1={"앱앤미 지원을 결심하셨군요!?"}
+                        note2={"꼼꼼히 작성해주시기 바랍니다. 좋은 결과 있길 바라요 :)"}
+                />
                 <form onSubmit={applyHandler}>
                     <div className="wrap-input">
                         <div className="title">이름</div>
@@ -55,15 +61,15 @@ const Apply = (props) => {
                     </div>
                     <div className="wrap-input">
                         <div className="title">자기소개</div>
-                        <input type="text" name="q1" placeholder="자기소개를 입력해주세요. (200자 이내)"/>
+                        <input type="text" name="q1" maxLength="220" placeholder="자기소개를 입력해주세요. (200자 이내)"/>
                     </div>
                     <div className="wrap-input">
                         <div className="title">지원동기</div>
-                        <input type="text" name="q2" placeholder="지원동기를 입력해주세요. (200자 이내)"/>
+                        <input type="text" name="q2" maxLength="220" placeholder="지원동기를 입력해주세요. (200자 이내)"/>
                     </div>
                     <div className="wrap-input">
                         <div className="title">다섯글자</div>
-                        <input type="text" name="q3" placeholder="자신을 다섯글자로 표현한다면?"/>
+                        <input type="text" name="q3" maxLength="5" placeholder="자신을 다섯글자로 표현한다면?"/>
                     </div>
                     <div className="wrap-input">
                         <div className="title">전화번호</div>

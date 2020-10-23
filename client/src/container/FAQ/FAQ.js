@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Titlebar from '../../component/Titlebar';
+import Titlebar from '../../component/Titlebar/Titlebar';
 import axios from 'axios';
 import './FAQ.scss';
 

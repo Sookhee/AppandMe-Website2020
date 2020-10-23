@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Titlebar from '../../component/Titlebar';
+import Titlebar from '../../component/Titlebar/Titlebar';
 import './Members.scss';
 
 import Profile7th1 from '../../image/members/7th/정민지.jpg';

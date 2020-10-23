@@ -1,0 +1,196 @@
+// All
+.about{
+    .wrap-banner{
+        .background{
+            background: rgb(255,175,183);
+            background: linear-gradient(63deg, rgba(255,175,183,1) 0%, rgba(255,99,112,1) 100%);
+            .container{
+                position: relative;
+                margin: 0 auto;
+                .image, .apply{
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+                .image{position: absolute; background-image: url('../../image/background.png'); background-size: cover;}
+                .apply{background-image: url('../../image/apply-arrow.png'); background-size: contain;}
+                .wrap-content{
+                    position: absolute;
+                    .title{color: #fff; font-weight: 700;}
+                    .li{color: rgba(255,255,255,0.6); span{font-weight: 700;}}
+                }
+            }
+        }
+    }
+    .wrap-intro{
+        .title{font-weight: 700;}
+        .subtitle{font-weight: 700;}
+        .content{color: #707070;}
+    }
+    .wrap-work{
+        .title{font-weight: 700;}
+    }
+}
+
+// Desktop, Labtop
+@media (min-width: 1025px) {
+    .about{
+        .wrap-banner{
+            margin-bottom: 50px;
+            .background{width: 100%; height: 540px;}
+            .container{
+                width: 1433px;
+                .image{width: 808px; height: 537px; top: 50px;}
+                .wrap-content{
+                    top: 67px;
+                    left: 853px;
+                    .title{font-size: 38px; margin-bottom: 30px; margin-left: 22px;}
+                    .li{font-size: 20px; margin-bottom: 4px; margin-left: 22px; span{padding-right: 16px;}}
+                }
+                .apply{position: absolute; width: 580px; height: 62px; top: 370px;}
+            }
+        }
+        .wrap-intro{
+            .container{
+                width: 1203px;
+                margin: 0 auto;
+                .title{font-size: 45px; margin: 162px 0 30px;}
+                .subtitle{font-size: 26px; margin: 60px 0 30px;}
+                .content{font-size: 25px;}
+            }
+        }
+        .wrap-work{
+            .container{
+                width: 1203px;
+                margin: 0 auto;
+                .title{font-size: 45px; margin: 74px 0 40px;}
+                .wrap-worktable{
+                    position: relative;
+                    margin: 67px 0 139px;
+                    .monthly{
+                        margin-bottom: 70px;
+                        display: flex;
+                        .month{font-size: 35px; font-weight: 700; color: #ff606f;}
+                        .work{
+                            margin-left: 179px;
+                            height: 91px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            font-size: 28px;
+                        }
+                    }
+                    .strip{
+                        position: absolute;
+                        top: 20px;
+                        left: 150px;
+                        width: 2px;
+                        height: 1304px;
+                        background: #ff606f;
+                        .point{
+                            position: absolute;
+                            left: -9px;
+                            background: #fff;
+                            border: 2px solid #ff606f;
+                            border-radius: 55px;
+                            width: 18px;
+                            height: 18px;
+                        }
+                        .m3{top: -9px;}
+                        .m4{top: 154px;}
+                        .m5{top: 317px;}
+                        .m6{top: 480px;}
+                        .m7{top: 643px;}
+                        .m8{top: 804px;}
+                        .m9{top: 963px;}
+                        .m10{top: 1126px;}
+                        .m11{bottom: 0px;}
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Tablet
+@media (min-width: 481px) and (max-width: 1024px) {
+}
+
+// Mobile
+@media (max-width: 480px) {
+    .about{
+        .wrap-banner{
+            margin-bottom: 38px;
+            .background{
+                width: 100%;
+                height: 492px;
+                position: relative;
+                .container{
+                    .image{width: 100%; height: 215px; top: 316px;}
+                    .wrap-content{
+                        padding-top: 28px;
+                        .title{font-size: 22px; margin-bottom: 19px;}
+                        .li{font-size: 12px; margin-bottom: 2px; span{margin-right: 12px;}}
+                        .apply{width: 305px; height: 36px; margin-top: 40px;}
+                    }
+                }
+            }
+        }
+        .wrap-intro{
+            .container{
+                .title{font-size: 24px; margin: 98px 0 16px;}
+                .subtitle{font-size: 14px; margin: 30px 0 20px;}
+                .content{font-size: 14px;}
+            }
+        }
+        .wrap-work{
+            .container{
+                width: 324px;
+                margin: 0 auto;
+                .title{font-size: 24px; margin: 60px 0 16px;}
+                .wrap-worktable{
+                    position: relative;
+                    margin: 44px 0 112px;
+                    .monthly{
+                        margin-bottom: 27px;
+                        display: flex;
+                        .month{font-size: 14px; font-weight: 700; color: #ff606f;}
+                        .work{
+                            margin-left: 52px;
+                            height: 36px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            font-size: 12px;
+                        }
+                    }
+                    .strip{
+                        position: absolute;
+                        top: 9.5px;
+                        left: 50px;
+                        width: 2px;
+                        height: 514px;
+                        background: #ff606f;
+                        .point{
+                            position: absolute;
+                            left: -7px;
+                            background: #fff;
+                            border: 2px solid #ff606f;
+                            border-radius: 55px;
+                            width: 14px;
+                            height: 14px;
+                        }
+                        .m3{top: -7px;}
+                        .m4{top: 55px;}
+                        .m5{top: 117px;}
+                        .m6{top: 179px;}
+                        .m7{top: 241px;}
+                        .m8{top: 303px;}
+                        .m9{top: 365px;}
+                        .m10{top: 433px;}
+                        .m11{bottom: 0px;}
+                    }
+                }
+            }
+        }
+    }
+}

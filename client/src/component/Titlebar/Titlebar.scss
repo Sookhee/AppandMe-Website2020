@@ -1,0 +1,27 @@
+// All
+.titlebar{
+    .title{font-weight: 700;}
+    .note{color: #707070;}
+}
+
+// Desktop, Labtop
+@media (min-width: 1025px) {
+    .titlebar{
+        .title{margin: 80px 0 15px; font-size: 50px;}
+        .note{font-size: 25px; line-height: 40px;}
+        .hr{margin-top: 60px;}
+    }
+}
+
+// Tablet
+@media (min-width: 481px) and (max-width: 1024px) {
+}
+
+// Mobile
+@media (max-width: 480px) {
+    .titlebar{
+        .title{margin: 40px 0 6px; font-size: 25px;}
+        .note{font-size: 13px; line-height: 20px;}
+        .hr{margin-top: 20px;}
+    }
+}

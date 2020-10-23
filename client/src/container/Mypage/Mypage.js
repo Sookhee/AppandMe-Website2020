@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import Titlebar from '../../component/Titlebar';
+import Titlebar from '../../component/Titlebar/Titlebar';
 import './Mypage.scss';
 
 const Mypage = (props) => {
@@ -99,7 +99,7 @@ const Mypage = (props) => {
                             </div>
                             <div className="wrap-input">
                                 <div className="title">비밀번호</div>
-                                <input type="tel" minLength="4" maxLength="4" name="passwd" placeholder="비밀번호를 입력해주세요. (4-8자리)"></input>
+                                <input type="tel" minLength="4" maxLength="8" name="passwd" placeholder="비밀번호를 입력해주세요. (4-8자리)"></input>
                             </div>
                             <div style={{display: 'flex', justifyContent: 'flex-end'}}><button>제출 확인</button></div>
                         </form>
