@@ -27,7 +27,7 @@ const Apply = (props) => {
             .then(function(response) {
                 if(response.data.success){
                     alert('지원서가 접수되었습니다.\n면접 일시 및 장소 안내는 개별 문자로 안내할 예정입니다.\n제출 확인 및 수정을 원하신다면 MYPAGE를 이용해주세요 :)')
-                    props.history.push('/mypage');
+                    window.location.replace("/mypage");
                 } else{
                     alert(response.data.message);
                 }
@@ -46,11 +46,11 @@ const Apply = (props) => {
                     <div className="wrap-flex">
                         <div className="wrap-input">
                             <div className="title">학번</div>
-                            <input type="tel" minLength="4" maxLength="4" name="uid" placeholder="학번을 입력해주세요."/>
+                            <input type="number" name="uid" placeholder="학번을 입력해주세요."/>
                         </div>
                         <div className="wrap-input">
                             <div className="title">비밀번호</div>
-                            <input type="tel" minLength="4" maxLength="4" name="passwd" placeholder="지원서 제출 확인 및 수정에 사용됩니다. (4자리 숫자)"/>
+                            <input type="tel" minLength="4" maxLength="8" name="passwd" placeholder="지원서 제출 확인 및 수정에 사용됩니다. (4-8자리)"/>
                         </div>
                     </div>
                     <div className="wrap-input">
