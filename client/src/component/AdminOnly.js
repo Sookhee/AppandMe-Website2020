@@ -20,7 +20,7 @@ const AdminOnly = () => {
 
     const adminIdentifierHandler = (event) => {
         event.preventDefault();
-        if(event.target.appandme_admin_code.value === ''){
+        if(event.target.appandme_admin_code.value === 'app#{NXL4RD;!Kh8<;kme'){
             setIsAdmin(true);
         } else{
             alert('당신, 앱앤미 부원 아니지!! ლ(ಠ益ಠლ)')
