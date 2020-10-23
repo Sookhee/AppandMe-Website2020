@@ -1,0 +1,54 @@
+// All
+.apply{
+    form{
+        .wrap-flex{display: flex;}
+        .wrap-input{
+            input{
+                border-bottom: 1px solid #a6a6a6;
+                &::placeholder{color: #707070;}
+            }
+        }
+        button{background: #fff; font-weight: 700; color: #ffb0b8; border: 2px solid #ffb0b8; border-radius: 200px;}
+    }
+}
+
+// Desktop, Labtop
+@media (min-width: 1025px) {
+    .apply{
+        margin: 6px 0 180px;
+        form{
+            .wrap-flex{
+                .wrap-input{width: 681px;}
+                justify-content: space-between;
+            }
+            .wrap-input{
+                .title{font-size: 20px; font-weight: 500; margin-top: 60px}
+                input{width: 100%; font-size: 25px; padding: 22px 0; margin-top: 4px;}
+            }
+            button{
+                margin-top: 60px;
+                padding: 26px 85px;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+// Tablet
+@media (min-width: 481px) and (max-width: 1024px) {
+}
+
+// Mobile
+@media (max-width: 480px) {
+    .apply{
+        form{
+            margin: 10px 0 100px;
+            .wrap-flex{flex-direction: column;}
+            .wrap-input{
+                .title{margin: 24px 0 3px; font-size: 12px;}
+                input{width: 100%; padding: 10px 0; font-size: 14px;}
+            }
+        }
+        button{padding: 8px 32px; margin-top: 40px;}
+    }
+}
