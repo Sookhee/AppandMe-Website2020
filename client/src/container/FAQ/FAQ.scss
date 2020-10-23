@@ -13,6 +13,7 @@
 // Desktop, Labtop
 @media (min-width: 1025px) {
     .wrap-faq{
+        margin-bottom: 272px;
         font-size: 25px;
         .wrap-frequently{padding: 60px 0;}
         .faq-question{font-weight: 700;}
@@ -28,6 +29,7 @@
 // Mobile
 @media (max-width: 480px) {
     .wrap-faq{
+        margin-bottom: 80px;
         font-size: 18px;
         .wrap-frequently{padding: 30px 0;}
         .faq-question{font-weight: 700;}
