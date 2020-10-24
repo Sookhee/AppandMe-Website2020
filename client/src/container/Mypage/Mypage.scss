@@ -55,4 +55,32 @@
 
 // Mobile
 @media (max-width: 480px) {
+    .mypage{
+        margin: 6px 0 40px;
+        .mypage-false{
+            width: 270px;
+            margin: 0 auto;
+        }
+        .mypage-true{
+            .wrap-flex{
+                width: 260px;
+                .info{font-weight: 600; font-size: 24px;}
+            }
+        }
+        form{
+            .wrap-flex{
+                .wrap-input{width: 681px;}
+                justify-content: space-between;
+            }
+            .wrap-input{
+                .title{font-size: 14px; font-weight: 500; margin-top: 35px}
+                input{width: 100%; font-size: 13px; padding: 10px 0;}
+            }
+            button{
+                padding: 8px 32px;
+                margin-top: 30px;
+                font-size: 14px;
+            }
+        }
+    }
 }
