@@ -56,8 +56,8 @@ const Mypage = (props) => {
             <div className="container">
                 <Titlebar
                     title={"MYPAGE"}
-                    note1={"제출한 지원서를 확인하거나 수정할 수 있습니다"}
-                    note2={"비밀번호를 잊어버렸다면 앱앤미 페이스북 페이지를 통해 문의해주세요"}
+                    note1={"제출한 지원서를 확인하거나 수정할 수 있습니다."}
+                    note2={"비밀번호를 잊어버렸다면 앱앤미 페이스북 페이지를 통해 문의해주세요;-)"}
                 />
 
                 {
